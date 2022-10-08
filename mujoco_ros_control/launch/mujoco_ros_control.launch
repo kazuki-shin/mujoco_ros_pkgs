@@ -1,7 +1,7 @@
 <launch>
   <!-- This launch file launches mujoco_ros_control node -->
   <param name="/use_sim_time" value="true"/>
-  <arg name="robot_model_path"/>
+  <arg name="robot_model_path" default="/home/kazukis2/.mujoco/mujoco-2.2.2/model/humanoid/humanoid.xml"/>
   <arg name="robot_description_param" default="robot_description"/>
   <arg name="debug" default="false"/>
   <arg name="key_path" default="/home/user/mjpro150/bin/mjkey.txt"/>

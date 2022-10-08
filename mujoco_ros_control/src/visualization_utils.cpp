@@ -56,7 +56,7 @@ void MujocoVisualizationUtils::init(mjModel* mujoco_model, mjData* mujoco_data, 
   lasty = 0;
 
   // initialize MuJoCo visualization
-  mjv_makeScene(&scn, 1000);
+  mjv_makeScene(mujoco_model_, &scn, 1000);
   mjv_defaultCamera(&cam);
   mjv_defaultOption(&opt);
   mjr_defaultContext(&con);
@@ -443,12 +443,12 @@ void MujocoVisualizationUtils::mouse_button_cb_implementation(GLFWwindow* window
 
         // find geom and 3D click point, get corresponding body
         mjtNum selpnt[3];
-        int selgeom = mjv_select(mujoco_model_, mujoco_data_, &opt,
+        int selgeom, selskin;
+        int selbody = mjv_select(mujoco_model_, mujoco_data_, &opt,
                                  (mjtNum)width/(mjtNum)height,
                                  (mjtNum)lastx/(mjtNum)width,
                                  (mjtNum)(height-lasty)/(mjtNum)height,
-                                 &scn, selpnt);
-        int selbody = (selgeom >=0 ? mujoco_model_->geom_bodyid[selgeom] : 0);
+                                 &scn, selpnt, &selgeom, &selskin);
 
         // set lookat point, start tracking is requested
         if (selmode == 2 || selmode == 3)

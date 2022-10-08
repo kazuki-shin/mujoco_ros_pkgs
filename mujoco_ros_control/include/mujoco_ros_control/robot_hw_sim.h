@@ -33,9 +33,9 @@
 #include <transmission_interface/transmission_info.h>
 
 // Mujoco dependencies
-#include <mujoco.h>
-#include <mjdata.h>
-#include <mjmodel.h>
+#include <mujoco/mujoco.h>
+#include <mujoco/mjdata.h>
+#include <mujoco/mjmodel.h>
 
 // ROS
 #include <ros/ros.h>

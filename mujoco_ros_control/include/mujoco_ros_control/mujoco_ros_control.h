@@ -32,9 +32,9 @@
 #include <ros/package.h>
 
 // Mujoco dependencies
-#include <mujoco.h>
-#include <mjdata.h>
-#include <mjmodel.h>
+#include <mujoco/mujoco.h>
+#include <mujoco/mjdata.h>
+#include <mujoco/mjmodel.h>
 
 #include <fstream>
 #include <string>
@@ -55,7 +55,7 @@
 #include <transmission_interface/transmission_parser.h>
 
 // openGL stuff
-#include <glfw3.h>
+#include <GLFW/glfw3.h>
 #include <mujoco_ros_control/visualization_utils.h>
 
 #include <rosgraph_msgs/Clock.h>

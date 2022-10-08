@@ -27,9 +27,9 @@
 #include <urdf/model.h>
 
 // Mujoco dependencies
-#include <mujoco.h>
-#include <mjdata.h>
-#include <mjmodel.h>
+#include <mujoco/mujoco.h>
+#include <mujoco/mjdata.h>
+#include <mujoco/mjmodel.h>
 
 #include <string>
 #include <vector>

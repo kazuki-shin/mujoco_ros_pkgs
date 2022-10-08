@@ -21,8 +21,8 @@
 #ifndef MUJOCO_ROS_CONTROL_VISUALIZATION_UTILS_H
 #define MUJOCO_ROS_CONTROL_VISUALIZATION_UTILS_H
 
-#include <mujoco.h>
-#include <glfw3.h>
+#include <mujoco/mujoco.h>
+#include <GLFW/glfw3.h>
 #include <stdio.h>
 #include <string.h>
 #include <ros/ros.h>
